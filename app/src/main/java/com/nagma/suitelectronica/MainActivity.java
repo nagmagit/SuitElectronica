@@ -25,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openButton_Click(View view) {
+        // Get the component to display the results to
         EditText et = findViewById(R.id.receivedEditText);
 
-        // Get devices
+        // Get USB manager services and ask for all connected devices
         UsbManager manager =
                 (UsbManager)getApplicationContext().getSystemService(Context.USB_SERVICE);
         Map<String, UsbDevice> devices = manager.getDeviceList();
@@ -43,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
                 deviceString += deviceVID + "\n";
 
+                // Arduino's vendor ID is always 0x2341
                 if (deviceVID == 0x2341) {
+                    // Ask for permission to use this device
                     PendingIntent pi = PendingIntent.getBroadcast(this, 0,
                             new Intent(ACTION_USB_PERMISSION), 0);
 
