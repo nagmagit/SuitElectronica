@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Suit Electronica</string>
+    <string name="board_detected">Board detected!</string>
+    <string name="board_notdetected">Board not detected</string>
 </resources>
