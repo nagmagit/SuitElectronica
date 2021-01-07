@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="baudRates">
+        <item>9600</item>
         <item>300</item>
         <item>1200</item>
         <item>2400</item>
         <item>4800</item>
-        <item>9600</item>
         <item>19200</item>
         <item>38400</item>
         <item>576600</item>

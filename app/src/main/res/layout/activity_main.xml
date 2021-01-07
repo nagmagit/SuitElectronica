@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:focusableInTouchMode="true"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -33,7 +34,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Baud rate:" />
+                android:text="@string/baud_rate" />
 
             <Spinner
                 android:id="@+id/baudrateSpinner"
@@ -57,8 +58,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Open"
-                android:onClick="openButton_Click" />
+                android:onClick="openButton_Click"
+                android:text="@string/open" />
 
             <Button
                 android:id="@+id/closeButton"
@@ -66,7 +67,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Close" />
+                android:enabled="false"
+                android:text="@string/close" />
 
         </LinearLayout>
 
@@ -75,12 +77,12 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:editable="false"
             android:ems="10"
+            android:focusable="false"
             android:gravity="start|top"
-            android:hint="No data received yet..."
+            android:hint="@string/data_notreceived"
             android:importantForAutofill="no"
-            android:inputType="textMultiLine"
+            android:inputType="none"
             android:singleLine="false" />
 
         <TextView
@@ -100,9 +102,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Text to send..."
-                android:inputType="textPersonName"
-                android:importantForAutofill="no" />
+                android:enabled="false"
+                android:hint="@string/text_to_send"
+                android:importantForAutofill="no"
+                android:inputType="text" />
 
             <Button
                 android:id="@+id/sendButton"
@@ -110,7 +113,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Send" />
+                android:enabled="false"
+                android:text="@string/send" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

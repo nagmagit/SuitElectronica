@@ -2,4 +2,10 @@
     <string name="app_name">Suit Electronica</string>
     <string name="board_detected">Board detected!</string>
     <string name="board_notdetected">Board not detected</string>
+    <string name="baud_rate">Baud rate:</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="data_notreceived">No data received yet...</string>
+    <string name="text_to_send">Text to send...</string>
+    <string name="send">Send</string>
 </resources>
