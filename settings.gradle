@@ -1,1 +1,1 @@
-include ':app', ':usbserial-6.1.0-release'
+include ':app'
