@@ -68,6 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:enabled="false"
+                android:onClick="closeButton_Click"
                 android:text="@string/close" />
 
         </LinearLayout>
@@ -114,6 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:enabled="false"
+                android:onClick="sendButton_Click"
                 android:text="@string/send" />
         </LinearLayout>
     </LinearLayout>
