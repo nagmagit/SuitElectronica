@@ -11,6 +11,7 @@ import android.os.Handler;
 import com.felhr.usbserial.UsbSerialDevice;
 import com.felhr.usbserial.UsbSerialInterface;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -32,10 +33,14 @@ public class Arduino {
      *  Data received from serial port will be received here.
      */
     private UsbSerialInterface.UsbReadCallback readCallback = data -> {
-        String message = data.toString();
+        try {
+            String message = new String(data, "UTF-8");
 
-        if (readHandler != null)
-            readHandler.obtainMessage(0, message).sendToTarget();
+            if (readHandler != null)
+                readHandler.obtainMessage(0, message).sendToTarget();
+        } catch (UnsupportedEncodingException e) {
+            // Bad message. Ignore it, I guess
+        }
     };
 
     public Arduino(Context context, Handler readHandler) {
